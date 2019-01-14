@@ -32,7 +32,7 @@ public class SelectSort implements BaseSort{
         }
         long end = System.nanoTime();
         long costMills = end - start;
-        System.out.println("\nSelectSort completed time:" + costMills + "ns");
+        System.out.println("SelectSort completed time:" + costMills + "ns");
         return array;
     }
 

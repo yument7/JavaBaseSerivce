@@ -31,7 +31,7 @@ public class ShellSort implements BaseSort{
         }
         long end = System.nanoTime();
         long costMills = end - start;
-        System.out.println("\nShellSort completed time:" + costMills + "ns");
+        System.out.println("ShellSort completed time:" + costMills + "ns");
         return array;
     }
 

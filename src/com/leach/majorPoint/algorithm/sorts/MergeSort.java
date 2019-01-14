@@ -37,7 +37,7 @@ public class MergeSort implements BaseSort{
                 break;
         }
         long costMills = end - start;
-        System.out.println("\nMergeSort completed time:" + costMills + "ns");
+        System.out.println("MergeSort completed time:" + costMills + "ns");
         return array;
     }
 

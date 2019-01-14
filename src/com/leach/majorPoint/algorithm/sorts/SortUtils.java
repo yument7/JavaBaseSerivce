@@ -1,13 +1,12 @@
 package com.leach.majorPoint.algorithm.sorts;
 
 
+import java.util.Arrays;
+
 public class SortUtils{
     // 输出array
     public static void printArray(int[] array){
-        int len = array.length;
-        for(int i = 0; i < len; i++){
-            System.out.print(array[i] + "\t");
-        }
+        System.out.println("array="+Arrays.toString(array));
     }
 
     // 计算时间差 纳秒计

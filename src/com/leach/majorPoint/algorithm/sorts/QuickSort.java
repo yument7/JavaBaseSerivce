@@ -27,7 +27,7 @@ public class QuickSort implements BaseSort{
         array = quickSort(array,0,array.length-1);
         long end = System.nanoTime();
         long costMills = end - start;
-        System.out.println("\nMergeSort completed time:" + costMills + "ns");
+        System.out.println("MergeSort completed time:" + costMills + "ns");
         return array;
     }
 

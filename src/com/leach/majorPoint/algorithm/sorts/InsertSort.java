@@ -50,7 +50,7 @@ public class InsertSort implements BaseSort{
         }
         long end = System.nanoTime();
         long costMills = end - start;
-        System.out.println("\nInsertSort completed time:" + costMills + "ns");
+        System.out.println("InsertSort completed time:" + costMills + "ns");
         return array;
     }
 
