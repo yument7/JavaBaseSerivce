@@ -23,7 +23,7 @@ public class HeapSort implements BaseSort{
         array = heapSortMain(array);
         long end = System.nanoTime();
         long costMills = end - start;
-        System.out.println("BubbleSort completed time:" + costMills + "ns");
+        System.out.println("HeapSort completed time:" + costMills + "ns");
         return array;
     }
 

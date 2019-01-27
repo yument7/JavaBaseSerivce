@@ -30,7 +30,7 @@ public class RadixSort implements BaseSort{
         array = radixSortMain(array);
         long end = System.nanoTime();
         long costMills = end - start;
-        System.out.println("MergeSort completed time:" + costMills + "ns");
+        System.out.println("RadixSort completed time:" + costMills + "ns");
         return array;
     }
 
