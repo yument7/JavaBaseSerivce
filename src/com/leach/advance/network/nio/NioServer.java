@@ -8,6 +8,7 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
+import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -18,7 +19,7 @@ import java.util.Set;
  *    开启selector   -> Selector.open();
  *    绑定端口，设置非阻塞  -> bind()  ,   configureBlocking(false);
  *
- * 2. 注册socket 到 selector上并设置该socket的感兴趣事件-接收客户端连接事件， sk.registor(selector, SelectionKey,OP_ACCEPT)
+ * 2. 注册socket 到 selector上并设置该socket的感兴趣事件-接收客户端连接事件， sk.registor(selector, SelectionKey.OP_ACCEPT)
  *
  * 3. 轮询selector中的socket;
  *    通过selector的select()方法进行监听，每次执行select()方法都去查看发生了哪些事件（eg. 客户端新连接， 客户端发送消息等）；
@@ -105,7 +106,7 @@ public class NioServer {
             byte[] bytes = new byte[read];
             byteBuffer.get(bytes, 0, read);
             //读取了数据  广播
-            String s = new String(bytes, "utf-8");
+            String s = new String(bytes, StandardCharsets.UTF_8);
             writeClientData(socketChannel, s);
         }
     }

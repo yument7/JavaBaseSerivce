@@ -55,7 +55,7 @@ public class HuffmanTree<E> {
         }
 
         // 最后一次构建就是根节点
-        root = queue.poll();
+        this.root = queue.poll();
 
         // 为所有叶子节点构建编码
         generateCode();
@@ -171,8 +171,9 @@ public class HuffmanTree<E> {
         private E key;
         private int weight;         // 权重
         private TreeNode<E> left;   // 左子节点
-        private TreeNode<E> right;  // 右子节点
+
         private TreeNode<E> parent; // 父节点
+        private TreeNode<E> right;   // 右子节点
 
         private String code; // 对应编出的编码
 

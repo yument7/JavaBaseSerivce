@@ -12,7 +12,7 @@ public class TreeTest {
 
     public static void main(String[] args) {
 
-        Map<String, Integer> source = new HashMap<>();
+       /* Map<String, Integer> source = new HashMap<>();
         source.put("i", 5);
         source.put("love", 2);
         source.put("you", 0);
@@ -28,14 +28,16 @@ public class TreeTest {
 
         tree.getCodeInfo();
 
-        System.out.println(tree.decode("11011111111100"));
+        System.out.println(tree.decode("11011111111100"));*/
+
+       testBTree();
 
     }
 
     public static void testBTree(){
         BTree<Integer> testTree = new BTree<>(6);
 
-        int arr[ ] = { 3,14,7,1,8,5,11,17,13,6,23,12,20,26,4,16,18,24,25,19,9,10,15,27,28,2, 43, 46,32,38, 51,67,41,33, 36,87} ;
+        int[] arr = { 3,14,7,1,8,5,11,17,13,6,23,12,20,26,4,16,18,24,25,19,9,10,15,27,28,2, 43, 46,32,38, 51,67,41,33, 36,87} ;
 
         for (int i = 0; i < arr.length; i++) {
             testTree.insert(arr[i]);
